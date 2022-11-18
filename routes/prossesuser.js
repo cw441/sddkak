@@ -11,10 +11,8 @@ router.post('/creat', async(req , res)=>{
 try{
 data= req.body;
 ufr = Login(data);
-salt = bcrypt.genSaltSync(10);
-cryptedPass = await bcrypt.hashSync(data.passwred, salt);
-ufr.passwred = cryptedPass;
-ufr.status(200).save()
+sevedlogin = ufr.save()
+res.status(200).send(sevedlogin)
 }
 catch(error)
 {
@@ -29,7 +27,7 @@ ufr = await Login.findOne({email: data.email})
 if(!ufr){
 res.status(404).send('no email')
 }else{
-validPass = bcrypt.compareSync(data.passwred , ufr.passwred)
+validPass = (data.passwred , ufr.passwred)
 if(!validPass){
 res.status(401).send('passwrod or email !')
 }else{
