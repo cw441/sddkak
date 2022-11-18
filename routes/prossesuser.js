@@ -37,7 +37,10 @@ email: ufr.email,
 passwred: ufr.passwred
 }
 token = jwt.sign(payload , '1234500')
-res.status(200).send({ufr,mytoken:token})
+res.status(200).send({
+massege:"secsses",
+ufr,
+mytoken:token})
 }
 }
 })
