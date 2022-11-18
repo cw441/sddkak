@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use('/userr', prossesroutes);
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 30100;
 app.listen(port ,()=>{
 console.log('wwred');
 });

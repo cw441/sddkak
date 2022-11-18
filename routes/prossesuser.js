@@ -27,13 +27,14 @@ ufr = await Login.findOne({email: data.email})
 if(!ufr){
 res.status(404).send('no email')
 }else{
-validPass = (data.passwred , ufr.passwred)
+validPass =await Login.findOne ({passwred: data.passwred} )
 if(!validPass){
-res.status(401).send('passwrod or email !')
+res.status(401).send('no passwrod ')
 }else{
 payload = {
 _id: ufr._id,
-email: ufr.email
+email: ufr.email,
+passwred: ufr.passwred
 }
 token = jwt.sign(payload , '1234500')
 res.status(200).send({ufr,mytoken:token})
