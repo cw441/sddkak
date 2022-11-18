@@ -68,6 +68,17 @@ res.status(400).send(error)
 }
 
 })
+/////////////////delet////////////////////
+router.delete('/delet/:id', async(req , res)=>{
+try{
+id = req.params.id
+deletelogin = await Login.findByIdAndDelete({_id: id});
+res.send(deletelogin )
+}catch(error)
+{
+res.send(error)
+}
+})
 ////////////////////get data////////////////////
 router.get('/gset', async(req , res)=>{
 try{
