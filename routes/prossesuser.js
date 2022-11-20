@@ -44,7 +44,7 @@ mytoken:token})
 }
 }
 })
-////////////////get login////////////////
+////////////////get one login////////////////
 router.get('/getlogin/:ema', async(req , res)=>{
 try{
 ema = req.params.ema
@@ -57,7 +57,7 @@ res.status(400).send(error)
 }
 )
 /////////////////delet////////////////////
-router.delete('/delet/:id', async(req , res)=>{
+router.delete('/delete/:id', async(req , res)=>{
 try{
 id = req.params.id
 deletelogin = await Login.findByIdAndDelete({_id: id});
@@ -67,6 +67,17 @@ res.send(deletelogin )
 res.send(error)
 }
 })
+///////////////get data each login//////////////////
+router.get('/getlogin', async(req , res)=>{
+try{
+ufr =await Login.find();
+res.status(200).send(ufr);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
 ///////////////post data////////////////////////
 router.post('/ads', async(req , res)=>{
 try{

@@ -4,9 +4,11 @@ const Login = mongoose.model('loge',
 
 
 email: { type:String,
-      require:true
+      require:true,
+
 },
 name: {type:String ,
+       unique:true,
        required:true,
        minlength:3,
        maxlength:15,
