@@ -68,7 +68,7 @@ res.send(error)
 }
 })
 ///////////////get data each login//////////////////
-router.get('/getlogin', async(req , res)=>{
+router.get('/getlogeach', async(req , res)=>{
 try{
 ufr =await Login.find();
 res.status(200).send(ufr);
