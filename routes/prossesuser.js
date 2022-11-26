@@ -45,10 +45,11 @@ mytoken:token})
 }
 })
 ////////////////get one login////////////////
-router.get('/getlogin/:ema', async(req , res)=>{
+router.get('/getlogin/:ema/:pass', async(req , res)=>{
 try{
 ema = req.params.ema
-ufr =await Login.find({email: ema});
+pass = req.params.pass
+ufr =await Login.find({email: ema , passwred:pass});
 res.status(200).send(ufr);
 
 }catch (error){
