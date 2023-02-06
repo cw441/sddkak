@@ -10,4 +10,4 @@ mongoose.connect('mongodb+srv://mahoud:mahmood1234@cluster0.k5feipn.mongodb.net/
         console.log(err);
         })
 module.exports = mongoose;
-//mongodb+srv://mahoud:mahmood1234@cluster0.k5feipn.mongodb.net/?retryWrites=true&w=majority
+//mongodb://localhost:27017/ewwwwe
