@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Login = mongoose.model('loge',
-{
+new mongoose.Schema({
+
 
 
 email: { type:String,
@@ -8,7 +9,6 @@ email: { type:String,
 
 },
 name: {type:String ,
-       unique:true,
        required:true,
        minlength:3,
        maxlength:15,
@@ -16,7 +16,9 @@ name: {type:String ,
 passwred: { type:String,
            required:true
 },
+
 }
+)
 )
 
 module.exports = Login;

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const User3 = mongoose.model('User3',
-{
+new mongoose.Schema({
 name: {type:String},
 desc: {type:String},
 numberproduct: {type:String},
@@ -10,6 +10,6 @@ expar: {type:String},
 image: {type:String},
 conutry:{type:String}
 }
-)
+))
 
 module.exports = User3;

@@ -2,6 +2,9 @@ const express = require ('express');
 const router = express.Router();
 const User = require('../modules/user');
 const Login = require('../modules/login');
+const Buying = require('../modules/buy');
+const Commnetuser = require('../modules/commnetuser');
+
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -79,6 +82,33 @@ res.status(400).send(error)
 }
 }
 )
+/////////////////post buy/////////////////////////
+router.post('/addbuy', async(req , res)=>{
+try{
+data= req.body;
+buey = Buying(data);
+savedbuy = await buey.save();
+res.status(200).send(savedbuy)
+
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get buy/////////////////////////
+
+router.get('/getbuy', async(req , res)=>{
+try{
+buuy =await Buying.find().populate('auther');
+res.status(200).send(buuy);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
 ///////////////post data////////////////////////
 router.post('/ads', async(req , res)=>{
 try{
@@ -127,6 +157,30 @@ res.send(updated);
 }catch(error){
 res.send(error)}
 })
+/////////////////post commnetuser///////////////////////
+router.post('/comnetuserp', async(req , res)=>{
+try{
+data= req.body;
+comus = Commnetuser(data);
+savedcomus = await comus.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
 
+})
+/////////////////get commnetuser////////////////////
+router.get('/comnetuserg', async(req , res)=>{
+try{
+savedcomus =await Commnetuser.find().populate('auther');
+res.status(200).send(savedcomus);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
 module.exports = router;
