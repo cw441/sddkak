@@ -1,6 +1,7 @@
 const express = require ('express');
 const router = express.Router();
 const User1 = require('../modules/user1');
+const Commnetuser1 = require('../modules/commnetuser1');
 const User2 = require('../modules/user2');
 const User3 = require('../modules/user3');
 const User4 = require('../modules/user4');
@@ -63,7 +64,44 @@ res.send(updated);
 }catch(error){
 res.send(error)}
 })
+///////////post commentuser1///////////////////
+router.post('/comnetuserp1', async(req , res)=>{
+try{
+data= req.body;
+comus1 = Commnetuser1(data);
+savedcomus = await comus1.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg1', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser1.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet1c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser1.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 ///////////////post data////////////////////////
 router.post('/add2', async(req , res)=>{
 try{
@@ -112,7 +150,44 @@ res.send(updated);
 res.send(error)}
 })
 
+///////////post commentuser1///////////////////
+router.post('/comnetuserp2', async(req , res)=>{
+try{
+data= req.body;
+comus2 = Commnetuser2(data);
+savedcomus = await comus2.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg2', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser2.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet2c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser2.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 ///////////////post data////////////////////////
 router.post('/add3', async(req , res)=>{
 try{
@@ -162,7 +237,44 @@ res.send(updated);
 res.send(error)}
 })
 
+///////////post commentuser1///////////////////
+router.post('/comnetuserp3', async(req , res)=>{
+try{
+data= req.body;
+comus1 = Commnetuser3(data);
+savedcomus = await comus1.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg3', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser3.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet3c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser3.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 
 ///////////////post data////////////////////////
 router.post('/add4', async(req , res)=>{
@@ -213,7 +325,44 @@ res.send(updated);
 res.send(error)}
 })
 
+///////////post commentuser1///////////////////
+router.post('/comnetuserp4', async(req , res)=>{
+try{
+data= req.body;
+comus1 = Commnetuser4(data);
+savedcomus = await comus1.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg4', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser4.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet4c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser4.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 ///////////////post data////////////////////////
 router.post('/add5', async(req , res)=>{
 try{
@@ -263,7 +412,44 @@ res.send(updated);
 res.send(error)}
 })
 
+///////////post commentuser1///////////////////
+router.post('/comnetuserp5', async(req , res)=>{
+try{
+data= req.body;
+comus1 = Commnetuser5(data);
+savedcomus = await comus1.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg5', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser5.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet5c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser5.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 ///////////////post data////////////////////////
 router.post('/add6', async(req , res)=>{
 try{
@@ -313,7 +499,44 @@ res.send(updated);
 res.send(error)}
 })
 
+///////////post commentuser1///////////////////
+router.post('/comnetuserp6', async(req , res)=>{
+try{
+data= req.body;
+comus1 = Commnetuser6(data);
+savedcomus = await comus1.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg6', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser6.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet6c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser6.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 ///////////////post data////////////////////////
 router.post('/add7', async(req , res)=>{
 try{
@@ -363,7 +586,44 @@ res.send(updated);
 res.send(error)}
 })
 
+///////////post commentuser1///////////////////
+router.post('/comnetuserp7', async(req , res)=>{
+try{
+data= req.body;
+comus1 = Commnetuser7(data);
+savedcomus = await comus1.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg7', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser7.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet7c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser7.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 ///////////////post data////////////////////////
 router.post('/add8', async(req , res)=>{
 try{
@@ -413,6 +673,45 @@ res.send(updated);
 res.send(error)}
 })
 
+
+///////////post commentuser1///////////////////
+router.post('/comnetuserp8', async(req , res)=>{
+try{
+data= req.body;
+comus1 = Commnetuser8(data);
+savedcomus = await comus1.save();
+res.status(200).send(savedcomus)
+
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg8', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser8.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet8c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser8.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 ///////////////post data////////////////////////
 router.post('/add9', async(req , res)=>{
 try{
@@ -462,7 +761,44 @@ res.send(updated);
 res.send(error)}
 })
 
+///////////post commentuser1///////////////////
+router.post('/comnetuserp9', async(req , res)=>{
+try{
+data= req.body;
+comus1 = Commnetuser9(data);
+savedcomus = await comus1.save();
+res.status(200).send(savedcomus)
 
+}
+catch(error)
+{
+res.status(400).send(error)
+}
+
+})
+/////////////////get commnetuser1////////////////////
+router.get('/comnetuserg9', async(req , res)=>{
+try{
+savedcomus1 =await Commnetuser9.find().populate('auther');
+res.status(200).send(savedcomus1);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+
+)
+///////////////////deleteCommnetuser////////////////////
+router.delete('/delet9c/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser9.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 ///////////////post data////////////////////////
 router.post('/addc', async(req , res)=>{
 try{

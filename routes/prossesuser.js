@@ -183,4 +183,15 @@ res.status(400).send(error)
 }
 }
 )
+///////////////////delete////////////////////
+router.delete('/deletcq/:id', async(req , res)=>{
+try{
+id = req.params.id
+deleteUser = await Commnetuser.findByIdAndDelete({_id: id});
+res.send(deleteUser)
+}catch(error)
+{
+res.send(error)
+}
+})
 module.exports = router;
