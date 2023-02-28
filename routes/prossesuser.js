@@ -173,9 +173,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser////////////////////
-router.get('/comnetuserg', async(req , res)=>{
+router.get('/comnetuserg/:idn', async(req , res)=>{
 try{
-savedcomus =await Commnetuser.find().populate('auther');
+idn=req.params.idn
+
+savedcomus =await Commnetuser.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus);
 
 }catch (error){
