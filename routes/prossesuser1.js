@@ -80,9 +80,10 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg1', async(req , res)=>{
+router.get('/comnetuserg1/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser1.find().populate('auther');
+idn=req.params.idn
+savedcomus1 =await Commnetuser1.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){
@@ -166,9 +167,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg2', async(req , res)=>{
+router.get('/comnetuserg2/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser2.find().populate('auther');
+idn=req.params.idn
+
+savedcomus1 =await Commnetuser2.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){
@@ -253,9 +256,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg3', async(req , res)=>{
+router.get('/comnetuserg3/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser3.find().populate('auther');
+idn=req.params.idn
+
+savedcomus1 =await Commnetuser3.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){
@@ -341,9 +346,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg4', async(req , res)=>{
+router.get('/comnetuserg4/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser4.find().populate('auther');
+idn=req.params.idn
+
+savedcomus1 =await Commnetuser4.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){
@@ -428,9 +435,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg5', async(req , res)=>{
+router.get('/comnetuserg5/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser5.find().populate('auther');
+idn=req.params.idn
+
+savedcomus1 =await Commnetuser5.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){
@@ -515,9 +524,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg6', async(req , res)=>{
+router.get('/comnetuserg6/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser6.find().populate('auther');
+idn=req.params.idn
+
+savedcomus1 =await Commnetuser6.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){
@@ -602,9 +613,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg7', async(req , res)=>{
+router.get('/comnetuserg7/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser7.find().populate('auther');
+idn=req.params.idn
+
+savedcomus1 =await Commnetuser7.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){
@@ -690,9 +703,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg8', async(req , res)=>{
+router.get('/comnetuserg8/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser8.find().populate('auther');
+idn=req.params.idn
+
+savedcomus1 =await Commnetuser8.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){
@@ -777,9 +792,11 @@ res.status(400).send(error)
 
 })
 /////////////////get commnetuser1////////////////////
-router.get('/comnetuserg9', async(req , res)=>{
+router.get('/comnetuserg9/:idn', async(req , res)=>{
 try{
-savedcomus1 =await Commnetuser9.find().populate('auther');
+idn=req.params.idn
+
+savedcomus1 =await Commnetuser9.find({idname:idn}).populate('auther');
 res.status(200).send(savedcomus1);
 
 }catch (error){

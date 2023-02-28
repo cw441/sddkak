@@ -7,7 +7,10 @@ namecom: {
       type:String,
       require:true,
 },
-
+idname: {
+      type:String,
+      require:true,
+},
 auther:{
          type:mongoose.Types.ObjectId,
          ref:'User5'
