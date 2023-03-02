@@ -1,20 +1,39 @@
 const mongoose = require('mongoose');
-const Login = require('../modules/login');
 const Buying = mongoose.model('buying',
 new mongoose.Schema({
-
 namebuy: {
       type:String,
       require:true,
 },
-namedoe: {
+image: {
+      type:String,
+      require:true,
+},
+prase: {
        type:String ,
        required:true,
 },
-auther:{
-         type:mongoose.Types.ObjectId,
-         ref:'loge'
-}
+numberproduct: {
+      type:String,
+      require:true,
+},
+tem: {
+      type:String,
+      require:true,
+},
+address: {
+      type:String,
+      require:true,
+},
+phone: {
+      type:String,
+      require:true,
+},
+iduser: {
+      type:String,
+      require:true,
+},
+
 
 })
 )

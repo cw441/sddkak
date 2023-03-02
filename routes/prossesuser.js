@@ -98,17 +98,37 @@ res.status(400).send(error)
 
 })
 /////////////////get buy/////////////////////////
-
-router.get('/getbuy', async(req , res)=>{
+router.get('/getbuy/:idn', async(req , res)=>{
 try{
-buuy =await Buying.find().populate('auther');
+idn=req.params.idn
+buuy =await Buying.find({iduser:idn});
 res.status(200).send(buuy);
 
 }catch (error){
 res.status(400).send(error)
 }
-}
-)
+})
+/////////////////delete buy////////////
+router.delete('/delet/:id', async(req , res)=>{
+ try{
+ id = req.params.id
+ deleteUser = await Buying.findByIdAndDelete({_id: id});
+ res.send(deleteUser)
+ }catch(error)
+ {
+ res.send(error)
+ }
+ })
+ /////////////////update buy//////////////////////
+ router.put('/upt/:id',async(req,res)=>{
+ try{
+ id=req.params.id;
+ newData = req.body;
+ updated= await Buying.findByIdAndUpdate({_id: id}, newData);
+ res.send(updated);
+ }catch(error){
+ res.send(error)}
+ })
 ///////////////post data////////////////////////
 router.post('/ads', async(req , res)=>{
 try{
@@ -124,7 +144,6 @@ res.status(400).send(error)
 }
 
 })
-
 ////////////////////get data////////////////////
 router.get('/gset', async(req , res)=>{
 try{
