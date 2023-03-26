@@ -155,6 +155,19 @@ res.status(400).send(error)
 }
 }
 )
+////////////////////get 111111////////////////////
+router.get('/getd/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User.find({name:idn});
+res.status(200).send(savedcomus);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
 ////////////////////delet data///////////////////
 router.delete('/delet/:id', async(req , res)=>{
 try{

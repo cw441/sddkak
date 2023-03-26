@@ -43,6 +43,19 @@ res.status(400).send(error)
 }
 }
 )
+////////////////////get 111111////////////////////
+router.get('/getd1/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User1.find({name:idn});
+res.status(200).send(savedcomus);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
 ////////////////////delet data///////////////////
 router.delete('/delet1/:id', async(req , res)=>{
 try{
@@ -123,6 +136,19 @@ router.get('/get2', async(req , res)=>{
 try{
 users =await User2.find();
 res.status(200).send(users);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
+////////////////////get 111111////////////////////
+router.get('/getd2/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User2.find({name:idn});
+res.status(200).send(savedcomus);
 
 }catch (error){
 res.status(400).send(error)
@@ -212,6 +238,19 @@ router.get('/get3', async(req , res)=>{
 try{
 users =await User3.find();
 res.status(200).send(users);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
+////////////////////get 111111////////////////////
+router.get('/getd3/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User3.find({name:idn});
+res.status(200).send(savedcomus);
 
 }catch (error){
 res.status(400).send(error)
@@ -308,6 +347,19 @@ res.status(400).send(error)
 }
 }
 )
+////////////////////get 111111////////////////////
+router.get('/getd4/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User4.find({name:idn});
+res.status(200).send(savedcomus);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
 ////////////////////delet data///////////////////
 router.delete('/delet4/:id', async(req , res)=>{
 try{
@@ -391,6 +443,19 @@ router.get('/get5', async(req , res)=>{
 try{
 users =await User5.find();
 res.status(200).send(users);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
+////////////////////get 111111////////////////////
+router.get('/getd5/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User5.find({name:idn});
+res.status(200).send(savedcomus);
 
 }catch (error){
 res.status(400).send(error)
@@ -486,6 +551,19 @@ res.status(400).send(error)
 }
 }
 )
+////////////////////get 111111////////////////////
+router.get('/getd6/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User6.find({name:idn});
+res.status(200).send(savedcomus);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
 ////////////////////delet data///////////////////
 router.delete('/delet6/:id', async(req , res)=>{
 try{
@@ -569,6 +647,19 @@ router.get('/get7', async(req , res)=>{
 try{
 users =await User7.find();
 res.status(200).send(users);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
+////////////////////get 111111////////////////////
+router.get('/getd7/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User7.find({name:idn});
+res.status(200).send(savedcomus);
 
 }catch (error){
 res.status(400).send(error)
@@ -664,6 +755,19 @@ res.status(400).send(error)
 }
 }
 )
+////////////////////get 111111////////////////////
+router.get('/getd8/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User8.find({name:idn});
+res.status(200).send(savedcomus);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
 ////////////////////delet data///////////////////
 router.delete('/delet8/:id', async(req , res)=>{
 try{
@@ -748,6 +852,19 @@ router.get('/get9', async(req , res)=>{
 try{
 users =await User9.find();
 res.status(200).send(users);
+
+}catch (error){
+res.status(400).send(error)
+}
+}
+)
+////////////////////get 111111////////////////////
+router.get('/getd9/:idn', async(req , res)=>{
+try{
+idn=req.params.idn
+
+savedcomus =await User9.find({name:idn});
+res.status(200).send(savedcomus);
 
 }catch (error){
 res.status(400).send(error)
