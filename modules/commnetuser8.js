@@ -11,10 +11,7 @@ idname: {
       type:String,
       require:true,
 },
-iduser: {
-      type:String,
-      require:true,
-},
+
 auther:{
          type:mongoose.Types.ObjectId,
          ref:'User8'
