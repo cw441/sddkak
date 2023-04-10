@@ -98,6 +98,16 @@ res.status(400).send(error)
 
 })
 /////////////////get buy/////////////////////////
+  router.get('/getbuy', async(req , res)=>{
+  try{
+  buuy =await Buying.find();
+  res.status(200).send(buuy);
+
+  }catch (error){
+  res.status(400).send(error)
+  }
+  })
+/////////////////get buy/////////////////////////
 router.get('/getbuy/:idn', async(req , res)=>{
 try{
 idn=req.params.idn
