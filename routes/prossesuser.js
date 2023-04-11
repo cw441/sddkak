@@ -194,7 +194,7 @@ router.put('/upt/:id',async(req,res)=>{
 try{
 id=req.params.id;
 newData = req.body;
-updated= await User.findByIdAndUpdate({_id: id}, newData);
+updated= await User.findByIdAndUpdate({_id: id}, {numberproduct:newData.numberproduct});
 res.send(updated);
 }catch(error){
 res.send(error)}
