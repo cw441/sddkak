@@ -190,11 +190,11 @@ res.send(error)
 }
 })
 /////////////////update data//////////////////////
-router.put('/upt/:id',async(req,res)=>{
+router.put('/uptd/:id',async(req,res)=>{
 try{
 id=req.params.id;
 newData = req.body;
-updated= await User.findByIdAndUpdate({_id: id}, {numberproduct:newData.numberproduct});
+updated= await User.updateOne({_id: id},{$set:{numberproduct:newData.numberproduct}});
 res.send(updated);
 }catch(error){
 res.send(error)}
