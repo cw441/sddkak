@@ -130,7 +130,7 @@ router.delete('/delet/:id', async(req , res)=>{
  }
  })
  /////////////////update buy//////////////////////
- router.put('/upt/:id',async(req,res)=>{
+ router.put('/uptbug/:id',async(req,res)=>{
  try{
  id=req.params.id;
  newData = req.body;
